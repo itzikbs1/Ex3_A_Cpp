@@ -58,7 +58,7 @@ class Matrix{
         Matrix operator==(Matrix a);
         Matrix operator!=(Matrix a);
         friend ostream& operator<<(ostream& os, Matrix &m);
-        // friend istream& operator>>(istream& os, Matrix m);
+        friend istream& operator>>(istream& os, Matrix m);
         Matrix operator*(double scalr);
         Matrix operator*(Matrix mat);
         // friend Matrix operator*(Matrix mat, double scalr);

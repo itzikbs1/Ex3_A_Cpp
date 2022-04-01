@@ -85,6 +85,6 @@ using namespace zich;
             return os;
         }
         //hello
-        // Matrix::istream& operator>>(istream& in, Matrix m){
-            // return in;
-        // }
+        istream& operator>>(istream& in, Matrix m){
+            return in;
+        }
