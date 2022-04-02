@@ -32,9 +32,9 @@ int main() {
             [0 -1 0]
             [0 0 -1]*/
   cout << (3*a) << endl;
-  /* prints [-3 0 0]
-            [0 -3 0]
-            [0 0 -3]*/
+  /* prints [3 0 0]
+            [0 3 0]
+            [0 0 3]*/
 
   Matrix b{arr, 3, 3};
   a *= -3;
@@ -47,3 +47,4 @@ int main() {
   cout << "End of demo!" << endl;
   return 0;
 }
+

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string>
 #include <vector>
-// #include <vecintrin.h>
+
 
 using namespace std;
 namespace zich{
@@ -57,19 +57,36 @@ class Matrix{
         Matrix operator<=(Matrix a);
         Matrix operator==(Matrix a);
         Matrix operator!=(Matrix a);
-        friend ostream& operator<<(ostream& os, Matrix &m);
-        friend istream& operator>>(istream& os, Matrix m);
-        Matrix operator*(double scalr);
         Matrix operator*(Matrix mat);
-        // friend Matrix operator*(Matrix mat, double scalr);
-        friend Matrix operator*(double scalr, Matrix mat);
         Matrix operator*=(Matrix mat);
         Matrix operator*=(double scalr);
-        // void add(Matrix m1, Matrix m2);
-        // void add(Matrix m1, double scalr);
 
-        // void (Matrix m1, Matrix m2);
+        friend Matrix operator*(double scalr, Matrix& mat);
+        friend std::ostream& operator<<(ostream& os,const Matrix &m);
+        friend std::istream& operator>>(istream& in, const Matrix& m);
+        friend std::ostream& operator<<(ostream& os,const Matrix &m){
+            // os << m << endl;
+            return os;
+        }
+        friend std::istream& operator>>(istream& in, const Matrix& m){
+            // in >> m >> endl;
+            return in;
+        }
+        friend Matrix operator*(double scalr, Matrix& mat){
+            // cout<<scalr*mat;
+            return Matrix();
+        }
 
-
+    // std::ostream &zich::operator<<(std::ostream& os, zich::Matrix m)
+        // inline std::ostream &std::operator<<(<std::char_traits<char>>)(std::ostream& out, const char * __s)
+    // friend ostream& operator<<(ostream& os, Matrix &m){
+    //     os << m;
+    //     return os;
+    // }
+    // friend istream& operator>>(istream& in, Matrix &m){
+    //     in >> m;
+    //     return in;
+    // }
     };
 }
+        
