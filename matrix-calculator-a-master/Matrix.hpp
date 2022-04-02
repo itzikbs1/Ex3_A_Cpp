@@ -41,24 +41,30 @@ class Matrix{
         public:
         Matrix();
         Matrix(vector<double> mat, int row, int col);
-        Matrix operator+(Matrix a);
+        Matrix operator+(Matrix &a);
         Matrix operator+(double scalr);
         Matrix operator+();
-        Matrix operator+=(Matrix a);
+        Matrix operator+=(Matrix &a);
         Matrix operator+=(double scalr);
-        Matrix operator-(Matrix a);
+        Matrix operator-(Matrix &a);
         Matrix operator-(double scalr);
         Matrix operator-();
-        Matrix operator-=(Matrix a);
+        Matrix operator-=(Matrix &a);
         Matrix operator-=(double scalr);
-        Matrix operator>(Matrix a);
-        Matrix operator>=(Matrix a);
-        Matrix operator<(Matrix a);
-        Matrix operator<=(Matrix a);
-        Matrix operator==(Matrix a);
-        Matrix operator!=(Matrix a);
-        Matrix operator*(Matrix mat);
-        Matrix operator*=(Matrix mat);
+        Matrix operator>(Matrix &a);
+        Matrix operator>=(Matrix &a);
+        Matrix operator<(Matrix &a);
+        Matrix operator<=(Matrix &a);
+        Matrix operator==(Matrix &a);
+        Matrix operator!=(Matrix &a);
+
+        Matrix operator++ ();
+        Matrix operator++ (int n);
+        Matrix operator-- ();
+        Matrix operator-- (int n);
+
+        Matrix operator*(Matrix &mat);
+        Matrix operator*=(Matrix &mat);
         Matrix operator*=(double scalr);
 
         friend Matrix operator*(double scalr, Matrix& mat);
@@ -76,17 +82,6 @@ class Matrix{
             // cout<<scalr*mat;
             return Matrix();
         }
-
-    // std::ostream &zich::operator<<(std::ostream& os, zich::Matrix m)
-        // inline std::ostream &std::operator<<(<std::char_traits<char>>)(std::ostream& out, const char * __s)
-    // friend ostream& operator<<(ostream& os, Matrix &m){
-    //     os << m;
-    //     return os;
-    // }
-    // friend istream& operator>>(istream& in, Matrix &m){
-    //     in >> m;
-    //     return in;
-    // }
     };
 }
         

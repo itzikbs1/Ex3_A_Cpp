@@ -16,7 +16,7 @@ using namespace zich;
         Matrix::Matrix(vector<double> mat, int row, int col){
 
         }
-        Matrix Matrix::operator+(Matrix a){
+        Matrix Matrix::operator+(Matrix &a){
                 return Matrix();
             }
 
@@ -27,13 +27,13 @@ using namespace zich;
             return Matrix();
         }
 
-        Matrix Matrix::operator+=(Matrix a){
+        Matrix Matrix::operator+=(Matrix &a){
             return Matrix();
         }
         Matrix Matrix::operator+=(double scalr){
             return Matrix();
         }
-        Matrix Matrix::operator-(Matrix a){
+        Matrix Matrix::operator-(Matrix &a){
             return Matrix();
         }
 
@@ -43,40 +43,40 @@ using namespace zich;
         Matrix Matrix::operator-(){
             return Matrix();
         }
-        Matrix Matrix::operator-=(Matrix a){
+        Matrix Matrix::operator-=(Matrix &a){
             return Matrix();
         }
         Matrix Matrix::operator-=(double scalr){
             return Matrix();
         }
-        Matrix Matrix::operator>(Matrix a){
+        Matrix Matrix::operator>(Matrix &a){
             return Matrix();
         }
-        Matrix Matrix::operator>=(Matrix a){
+        Matrix Matrix::operator>=(Matrix &a){
             return Matrix();
         }
-        Matrix Matrix::operator<(Matrix a){
+        Matrix Matrix::operator<(Matrix &a){
             return Matrix();
         }
-        Matrix Matrix::operator<=(Matrix a){
+        Matrix Matrix::operator<=(Matrix &a){
             return Matrix();
         }
-        Matrix Matrix::operator==(Matrix a){
+        Matrix Matrix::operator==(Matrix &a){
             return Matrix(); 
         }
-        Matrix Matrix::operator!=(Matrix a){
+        Matrix Matrix::operator!=(Matrix &a){
             return Matrix();
         }
         // Matrix Matrix::operator*(double scalr){
         //     return Matrix();
         // }
-        Matrix Matrix::operator*(Matrix a){
+        Matrix Matrix::operator*(Matrix &a){
             return Matrix();
         }
         // Matrix operator*(double scalr, Matrix mat){
         //     return Matrix();
         // }
-        Matrix Matrix::operator*=(Matrix a){
+        Matrix Matrix::operator*=(Matrix &a){
             return a;
         }
         Matrix Matrix::operator*=(double scalr){
