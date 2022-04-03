@@ -12,7 +12,7 @@ namespace zich{
 class Matrix{
 
         private:
-        vector<double> mat;
+        vector<vector<double>> mat;
         int row;
         int col;
 
@@ -41,6 +41,7 @@ class Matrix{
         public:
         Matrix();
         Matrix(vector<double> mat, int row, int col);
+        Matrix(vector<vector<double>> mat, int row, int col);
         Matrix operator+(Matrix &a);
         Matrix operator+(double scalr);
         Matrix operator+();
@@ -51,12 +52,12 @@ class Matrix{
         Matrix operator-();
         Matrix operator-=(Matrix &a);
         Matrix operator-=(double scalr);
-        Matrix operator>(Matrix &a);
-        Matrix operator>=(Matrix &a);
-        Matrix operator<(Matrix &a);
-        Matrix operator<=(Matrix &a);
-        Matrix operator==(Matrix &a);
-        Matrix operator!=(Matrix &a);
+        bool operator>(Matrix &a);
+        bool operator>=(Matrix &a);
+        bool operator<(Matrix &a);
+        bool operator<=(Matrix &a);
+        bool operator==(Matrix &a);
+        bool operator!=(Matrix &a);
 
         Matrix operator++ ();
         Matrix operator++ (int n);

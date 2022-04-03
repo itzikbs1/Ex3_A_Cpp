@@ -14,10 +14,9 @@ using namespace zich;
             
         }
         Matrix::Matrix(vector<double> mat, int row, int col){
-
         }
         Matrix Matrix::operator+(Matrix &a){
-                return Matrix();
+            return Matrix();
             }
 
         Matrix Matrix::operator+(double scalr){
@@ -28,7 +27,7 @@ using namespace zich;
         }
 
         Matrix Matrix::operator+=(Matrix &a){
-            return Matrix();
+           return Matrix();
         }
         Matrix Matrix::operator+=(double scalr){
             return Matrix();
@@ -49,23 +48,23 @@ using namespace zich;
         Matrix Matrix::operator-=(double scalr){
             return Matrix();
         }
-        Matrix Matrix::operator>(Matrix &a){
-            return Matrix();
+        bool Matrix::operator>(Matrix &a){
+            return true;
         }
-        Matrix Matrix::operator>=(Matrix &a){
-            return Matrix();
+        bool Matrix::operator>=(Matrix &a){
+            return true;
         }
-        Matrix Matrix::operator<(Matrix &a){
-            return Matrix();
+        bool Matrix::operator<(Matrix &a){
+            return true;
         }
-        Matrix Matrix::operator<=(Matrix &a){
-            return Matrix();
+        bool Matrix::operator<=(Matrix &a){
+            return true;
         }
-        Matrix Matrix::operator==(Matrix &a){
-            return Matrix(); 
+        bool Matrix::operator==(Matrix &a){
+            return true; 
         }
-        Matrix Matrix::operator!=(Matrix &a){
-            return Matrix();
+        bool Matrix::operator!=(Matrix &a){
+            return true;
         }
         // Matrix Matrix::operator*(double scalr){
         //     return Matrix();
