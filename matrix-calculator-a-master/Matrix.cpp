@@ -1,31 +1,28 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-// #include "Demo.cpp"
-// #include <vector>
-// #include <vecintrin.h>
 #include "Matrix.hpp"
-// #include <stdexcept>
 
 using namespace std;
 using namespace zich;
 
         Matrix::Matrix(){
-            
+            this->row=0;
+            this->col=0;
         }
-        Matrix::Matrix(vector<double> mat, int row, int col){
+        Matrix::Matrix(const vector<double> &mat, int row, int col){
+            this->row = row;
+            this->col = col;
         }
         Matrix Matrix::operator+(Matrix &a){
             return Matrix();
             }
-
         Matrix Matrix::operator+(double scalr){
             return Matrix();
         }
         Matrix Matrix::operator+(){
             return Matrix();
         }
-
         Matrix Matrix::operator+=(Matrix &a){
            return Matrix();
         }
@@ -35,7 +32,6 @@ using namespace zich;
         Matrix Matrix::operator-(Matrix &a){
             return Matrix();
         }
-
        Matrix Matrix::operator-(double scalr){
             return Matrix();
         }
@@ -66,28 +62,31 @@ using namespace zich;
         bool Matrix::operator!=(Matrix &a){
             return true;
         }
-        // Matrix Matrix::operator*(double scalr){
+        // Matrix zich::operator*(double scalr){
         //     return Matrix();
         // }
+
+        Matrix Matrix::operator++ (){
+            return Matrix();
+        }
+        Matrix Matrix::operator++ (int n){
+            return Matrix();
+        }
+        Matrix Matrix::operator-- (){
+            return Matrix();
+        }
+        Matrix Matrix::operator-- (int n){
+            return Matrix();
+        }
         Matrix Matrix::operator*(Matrix &a){
             return Matrix();
         }
-        // Matrix operator*(double scalr, Matrix mat){
-        //     return Matrix();
-        // }
+        Matrix zich::operator*(double scalr, Matrix &mat){
+            return Matrix();
+        }
         Matrix Matrix::operator*=(Matrix &a){
             return a;
         }
         Matrix Matrix::operator*=(double scalr){
             return Matrix();
         }
-        // ostream& operator<<(ostream& ostream, Matrix m){
-        //     ostream << &m;
-            // ostream << ;
-        //     return ostream;
-        // }
-        // istream& operator>>(istream& in, Matrix m){
-            // in >> &m;
-            // cin>&m;
-        //     return in;
-        // }

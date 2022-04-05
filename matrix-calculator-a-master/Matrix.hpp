@@ -40,8 +40,8 @@ class Matrix{
         // }
         public:
         Matrix();
-        Matrix(vector<double> mat, int row, int col);
-        Matrix(vector<vector<double>> mat, int row, int col);
+        Matrix(const vector<double> &mat, int row, int col);
+        // Matrix(vector<vector<double>> mat, int row, int col);
         Matrix operator+(Matrix &a);
         Matrix operator+(double scalr);
         Matrix operator+();
@@ -64,25 +64,23 @@ class Matrix{
         Matrix operator-- ();
         Matrix operator-- (int n);
 
-        Matrix operator*(Matrix &mat);
-        Matrix operator*=(Matrix &mat);
+        Matrix operator*(Matrix &a);
+        Matrix operator*=(Matrix &a);
         Matrix operator*=(double scalr);
 
-        friend Matrix operator*(double scalr, Matrix& mat);
+        friend Matrix operator*(double scalr, Matrix& a);
         friend std::ostream& operator<<(ostream& os,const Matrix &m);
         friend std::istream& operator>>(istream& in, const Matrix& m);
         friend std::ostream& operator<<(ostream& os,const Matrix &m){
-            // os << m << endl;
             return os;
         }
         friend std::istream& operator>>(istream& in, const Matrix& m){
-            // in >> m >> endl;
             return in;
         }
-        friend Matrix operator*(double scalr, Matrix& mat){
-            // cout<<scalr*mat;
-            return Matrix();
-        }
+        // friend Matrix operator*(double scalr, Matrix& mat){
+        //     // cout<<scalr*mat;
+        //     return Matrix();
+        // }
     };
 }
         
