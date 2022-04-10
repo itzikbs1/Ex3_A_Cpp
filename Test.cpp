@@ -151,7 +151,6 @@ TEST_CASE("Subtraction and amount"){
 
         CHECK(((+matrix) != matrix_sub));
         CHECK(((matrix - mat_identity_3) == matrix_sub));
-        CHECK(((matrix -= k) == matrix_));
     }
 }
 TEST_CASE("CHECK ++ and -- operators"){
